@@ -50,11 +50,11 @@
             $sql_insert = "INSERT INTO Registration (id,name, email, job, date) 
                         VALUES (?,?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
-            $stmt->bindValue(0, $id);
-            $stmt->bindValue(1, $name);
-            $stmt->bindValue(2, $email);
-            $stmt->bindValue(3, $job);
-            $stmt->bindValue(4, $date);
+            $stmt->bindValue(1, $id);
+            $stmt->bindValue(2, $name);
+            $stmt->bindValue(3, $email);
+            $stmt->bindValue(4, $job);
+            $stmt->bindValue(5, $date);
             $stmt->execute();
         } catch(Exception $e) {
             echo "Failed: " . $e;
