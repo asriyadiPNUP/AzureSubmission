@@ -41,7 +41,7 @@
 
     if (isset($_POST['submit'])) {
         try {
-            $id = $_POST['id'];
+            $id = $_POST[id];
             $name = $_POST['name'];
             $email = $_POST['email'];
             $job = $_POST['job'];
