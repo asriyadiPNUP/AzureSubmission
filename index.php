@@ -40,7 +40,7 @@
 
     if (isset($_POST['submit'])) {
         try {
-            $name = $_POST['id'];
+            $id = $_POST['id'];
             $name = $_POST['name'];
             $email = $_POST['email'];
             $job = $_POST['job'];
@@ -68,12 +68,14 @@
             if(count($registrants) > 0) {
                 echo "<h2>People who are registered:</h2>";
                 echo "<table>";
-                echo "<tr><th>Name</th>";
+                echo "<tr><th>ID</th>";
+                echo "<th>Name</th>";
                 echo "<th>Email</th>";
                 echo "<th>Job</th>";
                 echo "<th>Date</th></tr>";
                 foreach($registrants as $registrant) {
-                    echo "<tr><td>".$registrant['name']."</td>";
+                    echo "<tr><td>".$registrant['id']."</td>";
+                    echo "<td>".$registrant['name']."</td>";
                     echo "<td>".$registrant['email']."</td>";
                     echo "<td>".$registrant['job']."</td>";
                     echo "<td>".$registrant['date']."</td></tr>";
