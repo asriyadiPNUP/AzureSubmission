@@ -40,13 +40,14 @@
 
     if (isset($_POST['submit'])) {
         try {
+            $name = $_POST['id'];
             $name = $_POST['name'];
             $email = $_POST['email'];
             $job = $_POST['job'];
             $date = date("Y-m-d");
             // Insert data
-            $sql_insert = "INSERT INTO Registration (name, email, job, date) 
-                        VALUES (?,?,?,?)";
+            $sql_insert = "INSERT INTO Registration (id,name, email, job, date) 
+                        VALUES (?,?,?,?,?)";
             $stmt = $conn->prepare($sql_insert);
             $stmt->bindValue(0, $id);
             $stmt->bindValue(1, $name);
