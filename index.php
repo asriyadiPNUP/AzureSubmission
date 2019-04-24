@@ -19,6 +19,7 @@
  <h1>Register here!</h1>
  <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
  <form method="post" action="index.php" enctype="multipart/form-data" >
+       ID  <input type="text" name="name" id="name"/></br></br>
        Name  <input type="text" name="name" id="name"/></br></br>
        Email <input type="text" name="email" id="email"/></br></br>
        Job <input type="text" name="job" id="job"/></br></br>
@@ -68,7 +69,7 @@
             if(count($registrants) > 0) {
                 echo "<h2>People who are registered:</h2>";
                 echo "<table>";
-                echo "<tr><th>ID</th>";
+                echo "<tr><th>id</th>";
                 echo "<th>Name</th>";
                 echo "<th>Email</th>";
                 echo "<th>Job</th>";
